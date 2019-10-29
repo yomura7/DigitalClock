@@ -10,6 +10,8 @@ import android.view.MenuItem
 import android.widget.TextView
 
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +34,6 @@ class MainActivity : AppCompatActivity() {
             val timerTask = object: TimerTask() {
                 override fun run(){
                     handler.post {
-                        Log.d("app", "hello")
                         textView.apply {
                             text = showCurrentTime()
                         }
@@ -64,5 +65,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun showCurrentTime(): String = Date().toString()
+    fun showCurrentTime(): String = with(Date()) {
+        val dateFormat = SimpleDateFormat("hh:mm:ss")
+        dateFormat.format(this)
+    }
 }
