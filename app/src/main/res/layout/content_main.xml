@@ -16,8 +16,63 @@
         android:text="@string/current_time"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277" />
+
+    <Spinner
+        android:id="@+id/text_size_spinner"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/text_font_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <Spinner
+        android:id="@+id/text_font_spinner"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/text_color_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/text_color_spinner"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="165dp"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/background_color_spinner"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_color_spinner"
+        app:layout_constraintVertical_bias="0.969" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

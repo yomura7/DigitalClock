@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="text_font_array">
+    <item>DEFAULT</item>
+    <item>DEFAULT_BOLD</item>
+    <item>SANS_SERIF</item>
+    <item>SERIF</item>
+    <item>MONOSPACE</item>
+</string-array>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="text_color_array">
+    <item>TEAL</item>
+    <item>BLACK</item>
+    <item>AQUA</item>
+    <item>FUCHSIA</item>
+    <item>LIME</item>
+    <item>MAROON</item>
+    <item>NAVY</item>
+    <item>PURPLE</item>
+    <item>SILVER</item>
+</string-array>
+</resources>
