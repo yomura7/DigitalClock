@@ -35,18 +35,17 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
 
         val textView = findViewById<TextView>(R.id.current_time)
-        var handler = Handler()
         secondTimer = Timer().apply {
             val timerTask = object: TimerTask() {
-                override fun run(){
-                    handler.post {
+                override fun run() {
+                    textView.post {
                         textView.apply {
-                            text = showCurrentTime()
+                            text = SimpleDateFormat("hh:mm:ss", Locale.JAPAN).format(Date())
                         }
                     }
                 }
             }
-            schedule(timerTask, 1000, 1000)
+            schedule(timerTask, 0, 1000)
         }
 
         // Spinner1
@@ -131,10 +130,5 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    fun showCurrentTime(): String = with(Date()) {
-        val dateFormat = SimpleDateFormat("hh:mm:ss")
-        dateFormat.format(this)
     }
 }
